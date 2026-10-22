@@ -1,0 +1,18 @@
+# Allow public read access to uploaded images in Apache/Hostinger/cPanel
+<IfModule authz_core_module>
+    Require all granted
+</IfModule>
+<IfModule !authz_core_module>
+    Order allow,deny
+    Allow from all
+</IfModule>
+
+# Prevent script execution in upload directory for security
+<FilesMatch "(?i)\.(php|php3|php4|php5|phtml|pl|py|cgi|sh|bash)$">
+    <IfModule authz_core_module>
+        Require all denied
+    </IfModule>
+    <IfModule !authz_core_module>
+        Deny from all
+    </IfModule>
+</FilesMatch>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SB Elevators Shop | B2B Industrial Spare Parts & OEM Store</title>
+    <meta name="description" content="Official B2B procurement portal for SB Elevators. Genuine elevator spare parts, traction machines, door operators, controller panels, safety gears, and guide rails for contractors and facility engineers." />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+
+    <!-- Google Fonts: Figtree (Overall) & JetBrains Mono (Code/Numbers) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script>
+      (function() {
+        const _warn = console.warn;
+        console.warn = function(...args) {
+          if (args[0] && typeof args[0] === 'string' && args[0].includes('cdn.tailwindcss.com')) {
+            return;
+          }
+          _warn.apply(console, args);
+        };
+      })();
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#eef5ff',
+                100: '#d9e8ff',
+                200: '#bcd7ff',
+                300: '#8ebdff',
+                400: '#5899fc',
+                500: '#3075f6',
+                600: '#1754ea',
+                700: '#0745A7', // Main primary Deep Navy Blue
+                800: '#053787',
+                900: '#03255c',
+                950: '#02183d',
+              },
+              slate: {
+                850: '#131e32',
+                900: '#0f172a',
+                950: '#080d1a',
+              },
+              emerald: {
+                500: '#10B981',
+                600: '#059669',
+                700: '#047857',
+              },
+              whatsapp: '#25D366',
+            },
+            fontFamily: {
+              sans: ['Figtree', 'sans-serif'],
+              display: ['Figtree', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            boxShadow: {
+              'glow': '0 0 25px -5px rgba(7, 69, 167, 0.3)',
+              'glow-green': '0 0 20px -3px rgba(37, 211, 102, 0.35)',
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- SheetJS for Microsoft Excel (.xlsx/.xls) template download & file parsing -->
+    <script src="https://cdn.jsdelivr.org/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  </head>
+  <body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-brand-700 selection:text-white min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
